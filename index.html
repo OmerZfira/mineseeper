@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Mine Sweeper</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+</head>
+
+<body onload="initGame()">
+    <div class="buttons">
+        <a href=# onclick="initGame()">Restart Game</a>
+        <a href=# onclick="revealNumbersTEST()">TEST Reveal Numbers</a>
+        <div class="rulesDropDownCont">
+            <a href=# onmouseover="toggleRules()" onmouseleave="toggleRules()"style="color: red">Don't Know The Rules?</a>
+            <div class="rulesDropDown">
+                <u>The Rules:</u><br> 1. Click to reveal a tile. <br> 2. If you reveal a mine, the game ends. <br> 3. If you
+                reveal an empty square, you keep playing. <br> 4. If you reveal a number, it tells you how many mines lay
+                hidden in the eight surrounding squares. <br> 5. Right-click to flag a tile as a suspected mine. <br><br>                You win by flagging <span class="highlight">ALL</span> and <span class="highlight">ONLY</span> the mines!
+            </div>
+        </div>
+        <div class="scoresDropDownCont">
+            <a href=# onmouseover="toggleLeaderboard()" onmouseleave="toggleLeaderboard()" class="leaderboardButton">The Leaderboard</a>
+            <div class="scoresDropDown">
+                <div class="scoresDifficulty">Difficulty: HARD</div>
+                <table>
+                    <tr class="grey">
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Time</th>
+                    </tr>
+                    <tbody class="scoreBoard"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="difficulty">
+        <a href=# onclick="changeDifficulty(this)" id="easyButton">EASY</a>
+        <a href=# onclick="changeDifficulty(this)" id="mediumButton">MEDIUM</a>
+        <a href=# onclick="changeDifficulty(this)" id="hardButton">HARD</a>
+    </div>
+
+    <div>
+        <h1>Mine Sweeper 2.x</h1>
+        <h2 class="gameOver"></h2>
+        <h3>Time: <span class="gameTimer"></span> </h4>
+    </div>
+
+    <div class="gameBoardCont">
+        <table border="4">
+            <tbody class="gameBoard"></tbody>
+        </table>
+    </div>
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>

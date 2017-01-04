@@ -1,0 +1,269 @@
+div {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h3 { margin-top: 4px; }
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
+.mine {
+    background-image: url("../img/mine.png");
+    background-color: #b5b5b5;
+}
+
+.mine.hidden {
+    background-image: none;
+    border:3px outset;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.mine.exploded {
+    background-image: url("../img/boom.png");
+}
+
+.blank {
+    background-color: #b5b5b5;
+}
+
+.blank.hidden {
+    background-color: lightgray;
+    border:3px outset;
+    cursor: pointer;
+}
+.number {
+    background-color: #b5b5b5;  
+}
+
+.num1 {
+    color: #0000ff;
+    font-weight: 400;
+}
+.num2 {
+    color: green;
+    font-weight: 500;
+}
+.num3 {
+    color: red;
+    font-weight: 600;
+}
+.num4 {
+    color: darkblue;
+    font-weight: 700;
+}
+.num5 {
+    color: darkred;
+    font-weight: 800;
+}
+.num6 {
+    color: #8aafce;
+    font-weight: 900;
+}
+.num7 {
+    color: black;
+    font-weight: 900;
+}
+.num8 {
+    color: #666666;
+    font-weight: 900;
+}
+
+.number.hidden {
+    border:3px outset;
+    background-color: lightgray; 
+    cursor: pointer; 
+}
+
+.hiddennumber { display: none; }
+
+.marked {
+    background-image: url("../img/marked.png");
+    cursor: pointer;
+}
+
+.marked.mine {
+    background-image: url("../img/marked.png");
+    cursor: pointer;
+}
+
+/*.wasMarked.number {
+    background-image: url("../img/error3.png");
+    background-size: 25px 25px;
+    background-position: top left;
+}
+
+.wasMarked.mine {
+    background-image: url("../img/error3.png"), url("../img/mine.png");;
+    background-size: 25px 25px;
+    background-position: top left;
+}*/
+
+.gameBoardCont table {
+    margin: 0 auto;
+    border: 15px lightgray outset;
+    cursor: default;
+}
+
+.gameBoard {
+    background-color: lightgray;
+    font-size:2em;
+}
+
+.gameBoard td {
+    width: 50px;
+    height: 50px;
+    text-align: center; 
+    background-size: 45px 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease;
+}
+
+.buttons {
+    position: fixed;
+    left: 10px;
+    float: top;
+    margin-top: 10px;
+}
+
+.buttons a:link, a:visited {
+    background-color: #8C999A;
+    border-radius: 50%;
+    color: #DDF0C2;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.buttons a:hover, a:active {
+    background-color: #DDF0C2;
+    color: #8C999A;
+    box-shadow: inset 0 0 0 7px #8C999A;
+    cursor: pointer;
+}
+
+.rulesDropDownCont {
+    margin-top: 0px;
+    position: relative;
+    display: block;
+}
+
+.rulesDropDown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    margin-top: 2px;
+    border: 3px solid #8C999A;
+    background-color: #f9f9f9;
+    width: 210px;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.8em;
+    box-shadow: 0px 8px 16px 0px black;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+}
+
+.scoresDifficulty {
+    margin-top: 0px;
+    padding: 2px;
+    font-size: 1.2em;
+    background-color: #0EB29A;
+    color: #DDF0C2;
+}
+.scoresDropDownCont {
+    margin-top: 0px;
+    position: relative;
+    display: block;
+}
+
+.scoresDropDown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    margin-top: 2px;
+    border: 3px solid #8C999A;
+    background-color: #f9f9f9;
+    width: 230px;
+    font-size: 0.8em;
+    box-shadow: 0px 8px 16px 0px black;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1; 
+}
+
+.scoresDropDown table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.scoresDropDown td,th {
+    margin: auto;
+    border: 2px solid #8C999A;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.scoresDropDown tr.grey  {
+    background-color: lightgrey;
+}
+
+.secondsSmall {
+    font-size: 0.6em;
+}
+
+.highlight {
+    color: red;
+    font-weight: 500;
+}
+
+.difficulty {
+    position: fixed;
+    right: 10px;
+    float: top;
+    margin-top: 10px;
+}
+.difficulty a:link, a:visited {
+    background-color: #8C999A;
+    border-radius: 50%;
+    color: #DDF0C2;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.difficulty a:hover, a:active {
+    background-color: #DDF0C2;
+    color: #8C999A;
+    box-shadow: inset 0 0 0 7px #8C999A;
+    cursor: pointer;
+}
+
+.difficulty a.chosenDifficulty { background-color: #0EB29A; }
+
+.difficulty a.chosenDifficulty:hover {
+    color: #0EB29A;
+    background-color: #DDF0C2;
+    box-shadow: inset 0 0 0 7px #0EB29A;
+}
+
+
+
+
